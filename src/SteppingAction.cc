@@ -58,8 +58,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 {
   Run* run = static_cast<Run*>(
         G4RunManager::GetRunManager()->GetNonConstCurrentRun());    
-  G4int  event = G4EventManager::GetEventManager()->GetConstCurrentEvent()->GetEventID();
-
+  
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
 
   //which volume ?
@@ -79,26 +78,16 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
   // energy deposit
   //
   G4double edepStep = aStep->GetTotalEnergyDeposit();
-
   if (edepStep <= 0.) return;
   G4double time   = aStep->GetPreStepPoint()->GetGlobalTime();
   G4double weight = aStep->GetPreStepPoint()->GetWeight();   
   fEventAction->AddEdep(iVol, edepStep, time, weight);
   
   //fill ntuple id = 2
-  G4int id = 4;   
-  const G4double length = aStep->GetStepLength();
-  const G4ThreeVector pos(aStep->GetPreStepPoint()->GetPosition());
-
-  //  std::cout << "SteppingAction.cc: Event,edep" << event << ", " << edepStep << std::endl;
+  G4int id = 2;   
   analysisManager->FillNtupleDColumn(id,0, edepStep);
   analysisManager->FillNtupleDColumn(id,1, time/s);
   analysisManager->FillNtupleDColumn(id,2, weight);
-  analysisManager->FillNtupleDColumn(id,3, pos[0]/mm);
-  analysisManager->FillNtupleDColumn(id,4, pos[1]/mm);
-  analysisManager->FillNtupleDColumn(id,5, pos[2]/mm);
-  analysisManager->FillNtupleDColumn(id,6, length/mm);
-  analysisManager->FillNtupleDColumn(id,7, event);
   analysisManager->AddNtupleRow(id);      
 }
 

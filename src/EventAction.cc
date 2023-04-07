@@ -91,8 +91,6 @@ void EventAction::EndOfEventAction(const G4Event*)
  //
  if (fEdep1 > 0.) {
    fWeight1 /= fEdep1;
-
-   //   std::cout << "fEdep1:: " << fEdep1  << std::endl;
    analysisManager->FillH1(0, fEdep1, fWeight1);   
  }
  
@@ -124,8 +122,7 @@ void EventAction::EndOfEventAction(const G4Event*)
  //  
  Run* run = static_cast<Run*>(
             G4RunManager::GetRunManager()->GetNonConstCurrentRun());
-      
-
+             
  run->AddEdep (fEdep1, fEdep2);             
 }
 

@@ -1,6 +1,6 @@
 CMakeFiles/rdecay02.dir/src/SteppingAction.cc.o: \
-  /Users/jackxu/Neutrinos/v2/rdecay02/src/SteppingAction.cc \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/SteppingAction.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/src/SteppingAction.cc \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/SteppingAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UserSteppingAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/globals.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ios.hh \
@@ -749,9 +749,9 @@ CMakeFiles/rdecay02.dir/src/SteppingAction.cc.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/DetectorConstruction.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/DetectorConstruction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VUserDetectorConstruction.hh \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/Run.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/Run.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Run.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Profiler.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Profiler.icc \
@@ -918,9 +918,9 @@ CMakeFiles/rdecay02.dir/src/SteppingAction.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleChange.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleChange.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ProcessType.hh \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/EventAction.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/EventAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UserEventAction.hh \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/HistoManager.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/HistoManager.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AnalysisManager.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GenericAnalysisManager.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ToolsAnalysisManager.hh \

@@ -1,6 +1,6 @@
 #----------------------------------------------------------------------------
 # Setup the project
-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16...3.21)
 project(rdecay02)
 
 #----------------------------------------------------------------------------
@@ -23,6 +23,9 @@ include(${Geant4_USE_FILE})
 #----------------------------------------------------------------------------
 # Locate sources and headers for this project
 #
+message(${Geant4_USE_FILE})
+message(${Geant4_INCLUDE_DIR})
+message(${Geant4_LIBRARIES})
 include_directories(${PROJECT_SOURCE_DIR}/include 
                     ${Geant4_INCLUDE_DIR})
 file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
@@ -40,6 +43,8 @@ target_link_libraries(rdecay02 ${Geant4_LIBRARIES} )
 # relies on these scripts being in the current working directory.
 #
 set(rdecay02_SCRIPTS
+    debug.mac
+    plotHisto.C
     rdecay02.in
     vis.mac
   )

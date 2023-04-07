@@ -38,7 +38,6 @@
 
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "G4ParticleGun.hh"
-#include "G4GeneralParticleSource.hh"
 #include "globals.hh"
 
 class G4Event;
@@ -53,12 +52,10 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
   public:
     virtual void GeneratePrimaries(G4Event*);
-  //    G4ParticleGun* GetParticleGun() {return fParticleGun;};
-    G4GeneralParticleSource* GetParticleGun() {return fParticleGun;};
+    G4ParticleGun* GetParticleGun() {return fParticleGun;};
 
   private:
-  //    G4ParticleGun*  fParticleGun;        //pointer a to G4 service class
-    G4GeneralParticleSource*  fParticleGun;        //pointer a to G4 service class
+    G4ParticleGun*  fParticleGun;        //pointer a to G4 service class
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

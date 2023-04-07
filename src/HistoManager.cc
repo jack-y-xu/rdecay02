@@ -45,7 +45,6 @@ HistoManager::HistoManager()
 
 HistoManager::~HistoManager()
 {
-  delete G4AnalysisManager::Instance();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -53,11 +52,10 @@ HistoManager::~HistoManager()
 void HistoManager::Book()
 {
   // Create or get analysis manager
-  // The choice of analysis technology is done via selection of a namespace
-  // in HistoManager.hh
   //
   G4AnalysisManager* analysis = G4AnalysisManager::Instance();
   
+  analysis->SetDefaultFileType("root");
   analysis->SetFileName(fFileName);
   analysis->SetVerboseLevel(1);
   analysis->SetActivation(true);     //enable inactivation of histos, nTuples
@@ -119,7 +117,7 @@ void HistoManager::Book()
   //       
   analysis->CreateNtuple("T1", "Emitted Particles");
   analysis->CreateNtupleDColumn("PID");       //column 0
-  analysis->CreateNtupleDColumn("KEnergy");    //column 1
+  analysis->CreateNtupleDColumn("Energy");    //column 1
   analysis->CreateNtupleDColumn("Time");      //column 2
   analysis->CreateNtupleDColumn("Weight");    //column 3
   analysis->FinishNtuple();
@@ -131,38 +129,19 @@ void HistoManager::Book()
   analysis->FinishNtuple();
   
   analysis->CreateNtuple("T3", "Energy depositions");
-  analysis->CreateNtupleDColumn("EnergyDep");    //column 0
+  analysis->CreateNtupleDColumn("Energy");    //column 0
   analysis->CreateNtupleDColumn("Time");      //column 1
   analysis->CreateNtupleDColumn("Weight");    //column 2
   analysis->FinishNtuple();
   
-  analysis->CreateNtuple("Tracks", "Track Summaries");
+  analysis->CreateNtuple("RDecayProducts", "All Products of RDecay");
   analysis->CreateNtupleDColumn("PID");       //column 0
   analysis->CreateNtupleDColumn("Z");         //column 1
   analysis->CreateNtupleDColumn("A");         //column 2    
-  analysis->CreateNtupleDColumn("KEnergy");    //column 3
+  analysis->CreateNtupleDColumn("Energy");    //column 3
   analysis->CreateNtupleDColumn("Time");      //column 4
-  analysis->CreateNtupleDColumn("TrkID");    //column 5
-  analysis->CreateNtupleDColumn("Startx");         //column 6    
-  analysis->CreateNtupleDColumn("Starty");         //column 7    
-  analysis->CreateNtupleDColumn("Startz");         //column 8    
-  analysis->CreateNtupleDColumn("Px");         //column 6    
-  analysis->CreateNtupleDColumn("Py");         //column 7    
-  analysis->CreateNtupleDColumn("Pz");         //column 8    
-  analysis->CreateNtupleDColumn("Length");         //column 9
-  analysis->CreateNtupleDColumn("Event");         //column 10
+  analysis->CreateNtupleDColumn("Weight");    //column 5
   analysis->FinishNtuple();
-
-  analysis->CreateNtuple("Step", "Step Summaries");
-  analysis->CreateNtupleDColumn("Edep");       //column 0
-  analysis->CreateNtupleDColumn("Time");         //column 1
-  analysis->CreateNtupleDColumn("Weight");         //column 2
-  analysis->CreateNtupleDColumn("X");         //column 3
-  analysis->CreateNtupleDColumn("Y");         //column 4
-  analysis->CreateNtupleDColumn("Z");         //column 5
-  analysis->CreateNtupleDColumn("Length");         //column 6
-  analysis->CreateNtupleDColumn("Event");         //column 7
-
   
   analysis->SetNtupleActivation(false);          
 }

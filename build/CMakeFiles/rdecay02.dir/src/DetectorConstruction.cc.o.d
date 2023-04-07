@@ -1,6 +1,6 @@
 CMakeFiles/rdecay02.dir/src/DetectorConstruction.cc.o: \
-  /Users/jackxu/Neutrinos/v2/rdecay02/src/DetectorConstruction.cc \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/DetectorConstruction.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/src/DetectorConstruction.cc \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/DetectorConstruction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VUserDetectorConstruction.hh \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/copy.h \
@@ -749,7 +749,7 @@ CMakeFiles/rdecay02.dir/src/DetectorConstruction.cc.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/DetectorMessenger.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/DetectorMessenger.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UImessenger.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIdirectory.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIcommand.hh \
@@ -845,15 +845,6 @@ CMakeFiles/rdecay02.dir/src/DetectorConstruction.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Visible.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Visible.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Tubs.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Box.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Box.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SubtractionSolid.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4BooleanSolid.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4DisplacedSolid.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4RotationMatrix.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AffineTransform.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AffineTransform.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4BooleanSolid.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4LogicalVolume.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Region.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GeomSplitter.hh \
@@ -865,6 +856,7 @@ CMakeFiles/rdecay02.dir/src/DetectorConstruction.cc.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/thread \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Region.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VPhysicalVolume.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4RotationMatrix.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VPhysicalVolume.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4LogicalVolume.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PVPlacement.hh \
@@ -984,6 +976,8 @@ CMakeFiles/rdecay02.dir/src/DetectorConstruction.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/RandStudentT.h \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/RandStudentT.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Navigator.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AffineTransform.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AffineTransform.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSVolume.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSVolume.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSSolid.hh \

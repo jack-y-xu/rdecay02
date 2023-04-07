@@ -1,4 +1,4 @@
- //
+//
 // ********************************************************************
 // * License and Disclaimer                                           *
 // *                                                                  *
@@ -42,7 +42,7 @@
 DetectorMessenger::DetectorMessenger(DetectorConstruction* Det)
 :G4UImessenger(), 
  fDetector(Det), fRdecayDir(0), fDetDir(0),
- fTargMatCmd(0), fDetectMatCmd(0), fTargRadiusCmd(0), fInsetRadiusCmd(0),
+ fTargMatCmd(0), fDetectMatCmd(0), fTargRadiusCmd(0),
  fDetectThicknessCmd(0), fTargLengthCmd(0), fDetectLengthCmd(0) 
 { 
   fRdecayDir = new G4UIdirectory("/rdecay02/");
@@ -57,26 +57,12 @@ DetectorMessenger::DetectorMessenger(DetectorConstruction* Det)
   fTargMatCmd->SetParameterName("choice",false);
   fTargMatCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   
-  fShieldThicknessCmd =
-       new G4UIcmdWithADoubleAndUnit("/rdecay02/det/setShieldThickness", this);
-  fShieldThicknessCmd->SetGuidance("Set the Shield Thickness.");
-  fShieldThicknessCmd->SetUnitCategory("Length");
-  fShieldThicknessCmd->SetParameterName("choice",false);
-  fShieldThicknessCmd->AvailableForStates(G4State_PreInit);  
-
   fTargRadiusCmd =
        new G4UIcmdWithADoubleAndUnit("/rdecay02/det/setTargetRadius", this);
   fTargRadiusCmd->SetGuidance("Set the Target Radius.");
   fTargRadiusCmd->SetUnitCategory("Length");
   fTargRadiusCmd->SetParameterName("choice",false);
   fTargRadiusCmd->AvailableForStates(G4State_PreInit);  
-
-  fInsetRadiusCmd =
-       new G4UIcmdWithADoubleAndUnit("/rdecay02/det/setInsetRadius", this);
-  fInsetRadiusCmd->SetGuidance("Set the Inset Radius.");
-  fInsetRadiusCmd->SetUnitCategory("Length");
-  fInsetRadiusCmd->SetParameterName("choice",false);
-  fInsetRadiusCmd->AvailableForStates(G4State_PreInit);  
 
   
   fTargLengthCmd =
@@ -114,8 +100,6 @@ DetectorMessenger::~DetectorMessenger()
   delete fTargMatCmd;
   delete fDetectMatCmd;
   delete fTargRadiusCmd;
-  delete fShieldThicknessCmd;
-  delete fInsetRadiusCmd;
   delete fDetectThicknessCmd;
   delete fTargLengthCmd;
   delete fDetectLengthCmd;
@@ -129,20 +113,12 @@ void DetectorMessenger::SetNewValue(G4UIcommand* command,G4String newValue)
 { 
   if (command == fTargMatCmd )
    { fDetector->SetTargetMaterial(newValue);}
-
-    // I believe to get desired nesting of volumes, I must go in this order.
-  if (command == fShieldThicknessCmd ) 
-    {fDetector->SetShieldThickness(fShieldThicknessCmd->GetNewDoubleValue(newValue));}
    
   if (command == fTargLengthCmd ) 
     { fDetector->SetTargetLength(fTargLengthCmd->GetNewDoubleValue(newValue));}
     
   if (command == fTargRadiusCmd ) 
     {fDetector->SetTargetRadius(fTargLengthCmd->GetNewDoubleValue(newValue));}
-
-
-  if (command == fInsetRadiusCmd ) 
-    {fDetector->SetInsetRadius(fInsetRadiusCmd->GetNewDoubleValue(newValue));}
     
   if (command == fDetectMatCmd )
     { fDetector->SetDetectorMaterial(newValue);}

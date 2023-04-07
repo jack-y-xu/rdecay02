@@ -27,8 +27,6 @@
 /// \brief Implementation of the Run class
 //
 // 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 #include "Run.hh"
 #include "DetectorConstruction.hh"
@@ -70,8 +68,8 @@ void Run::SetPrimary(G4ParticleDefinition* particle, G4double energy)
 
 void Run::CountProcesses(const G4VProcess* process, G4int iVol) 
 {
+  if (process == nullptr) return;  
   G4String procName = process->GetProcessName();
-  
   if (iVol == 1) {
     std::map<G4String,G4int>::iterator it1 = fProcCounter1.find(procName);
     if ( it1 == fProcCounter1.end()) {
@@ -258,10 +256,6 @@ void Run::EndOfRun()
   G4cout << "\n The run is " << numberOfEvent << " "<< Particle << " of "
          << G4BestUnit(fEkin,"Energy") << " through : ";
           
-  G4cout << "\n Shield   : Length = " 
-         << G4BestUnit(fDetector->GetShieldThickness(),"Length")  
-         << " Material = " 
-         << fDetector->GetShieldMaterial()->GetName();
   G4cout << "\n Target   : Length = " 
          << G4BestUnit(fDetector->GetTargetLength(),"Length")
          << " Radius    = " 
@@ -272,8 +266,6 @@ void Run::EndOfRun()
          << G4BestUnit(fDetector->GetDetectorLength(),"Length")
          << " Thickness = " 
          << G4BestUnit(fDetector->GetDetectorThickness(),"Length")  
-         << " Radius = " 
-         << G4BestUnit(fDetector->GetDetectorRadius(),"Length")  
          << " Material = " 
          << fDetector->GetDetectorMaterial()->GetName() << G4endl;
 
@@ -391,8 +383,8 @@ void Run::EndOfRun()
 void Run::WriteActivity(G4int nevent)
 {
  G4ProcessTable *pTable = G4ProcessTable::GetProcessTable();
- G4Radioactivation * rDecay = (G4Radioactivation *)
-         pTable->FindProcess("RadioactiveDecay", "GenericIon");
+ G4Radioactivation* rDecay = (G4Radioactivation *)
+         pTable->FindProcess("Radioactivation", "GenericIon");
    
  // output the induced radioactivities (in VR mode only)
  //

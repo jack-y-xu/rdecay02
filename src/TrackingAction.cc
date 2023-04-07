@@ -65,10 +65,9 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
   if (lVolume == fDetector->GetLogicTarget())   iVol = 1;
   if (lVolume == fDetector->GetLogicDetector()) iVol = 2;
     
-  //secondary particles only. EC wants all.
-  //  if (track->GetTrackID() == 1) return;
-  G4int event;
-  event = G4EventManager::GetEventManager()->GetConstCurrentEvent()->GetEventID();
+  //secondary particles only
+  if (track->GetTrackID() == 1) return;
+  
   const G4ParticleDefinition* particle = track->GetParticleDefinition();  
   G4String name   = particle->GetParticleName();
   G4int pid       = particle->GetPDGEncoding();
@@ -77,38 +76,23 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
   G4double charge = particle->GetPDGCharge();    
   G4double energy = track->GetKineticEnergy();
   G4double time   = track->GetGlobalTime();
-  G4double tID = track->GetTrackID();
   G4double weight = track->GetWeight();
-  const G4ThreeVector& vtx = track->GetVertexPosition();
-  const G4double length = track->GetTrackLength();
-  const G4ThreeVector pvtx =  track->GetMomentumDirection () ;
-
+  
   run->ParticleCount(name,energy,iVol);
   
   //Radioactive decay products
   G4int processType = track->GetCreatorProcess()->GetProcessSubType();
-  //  if (processType == fRadioactiveDecay) {
+  if (processType == fRadioactiveDecay) {
     //fill ntuple id = 3
-
-  //  std::cout << "Inside TrackingAction::PreUserTrackingAction()..." << std::endl ;
-  //  std::cout << "\t pid, energy, length, " << pid << ", " << energy << ", "  << length << std::endl;
     G4int id = 3;
     analysisManager->FillNtupleDColumn(id,0, double(pid));
     analysisManager->FillNtupleDColumn(id,1, double(Z));
     analysisManager->FillNtupleDColumn(id,2, double(A));
     analysisManager->FillNtupleDColumn(id,3, energy);
     analysisManager->FillNtupleDColumn(id,4, time/s);
-    analysisManager->FillNtupleDColumn(id,5, tID);
-    analysisManager->FillNtupleDColumn(id,6, vtx[0]);
-    analysisManager->FillNtupleDColumn(id,7, vtx[1]);
-    analysisManager->FillNtupleDColumn(id,8, vtx[2]);
-    analysisManager->FillNtupleDColumn(id,9,  pvtx[0]/sqrt(pvtx[0]*pvtx[0]+pvtx[1]*pvtx[1]+pvtx[2]*pvtx[2]));
-    analysisManager->FillNtupleDColumn(id,10, pvtx[1]/sqrt(pvtx[0]*pvtx[0]+pvtx[1]*pvtx[1]+pvtx[2]*pvtx[2]));
-    analysisManager->FillNtupleDColumn(id,11, pvtx[2]/sqrt(pvtx[0]*pvtx[0]+pvtx[1]*pvtx[1]+pvtx[2]*pvtx[2]));
-    analysisManager->FillNtupleDColumn(id,12, length);
-    analysisManager->FillNtupleDColumn(id,13, event);
+    analysisManager->FillNtupleDColumn(id,5, weight);
     analysisManager->AddNtupleRow(id);
-
+    
     if (charge < 3.) {   
       //fill ntuple id = 0
       id = 0;
@@ -121,15 +105,14 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
       analysisManager->FillH1(6, energy, weight);
       analysisManager->FillH1(7, energy, weight);
       analysisManager->FillH1(8, energy, weight);
-    } 
-
-    //  }
+    }                        
+  }
   
   //all unstable ions produced in target
   G4bool unstableIon = ((charge > 2.) && !(particle->GetPDGStable()));
   if ((unstableIon) && (iVol == 1)) {
     //fill ntuple id = 1
-    id = 1;
+    G4int id = 1;
     analysisManager->FillNtupleDColumn(id,0, double(pid));
     analysisManager->FillNtupleDColumn(id,1, time/s);
     analysisManager->FillNtupleDColumn(id,2, weight);

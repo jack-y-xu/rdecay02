@@ -1,6 +1,6 @@
 CMakeFiles/rdecay02.dir/src/HistoManager.cc.o: \
-  /Users/jackxu/Neutrinos/v2/rdecay02/src/HistoManager.cc \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/HistoManager.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/src/HistoManager.cc \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/HistoManager.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/globals.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ios.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Types.hh \

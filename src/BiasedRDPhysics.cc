@@ -23,32 +23,64 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file SteppingVerbose.hh
-/// \brief Definition of the SteppingVerbose class
-//
-//
-// 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#ifndef SteppingVerbose_h
-#define SteppingVerbose_h 1
+#include "BiasedRDPhysics.hh"
 
-#include "G4SteppingVerbose.hh"
+#include "G4Radioactivation.hh"
+#include "G4GenericIon.hh"
+#include "globals.hh"
+#include "G4PhysicsListHelper.hh"
+#include "G4EmParameters.hh"
+#include "G4VAtomDeexcitation.hh"
+#include "G4UAtomicDeexcitation.hh"
+#include "G4LossTableManager.hh"
+#include "G4NuclearLevelData.hh"
+#include "G4DeexPrecoParameters.hh"
+#include "G4NuclideTable.hh"
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+// factory
+#include "G4PhysicsConstructorFactory.hh"
 
-class SteppingVerbose : public G4SteppingVerbose {
+G4_DECLARE_PHYSCONSTR_FACTORY(BiasedRDPhysics);
 
-public:   
 
-  SteppingVerbose();
- ~SteppingVerbose();
- 
-  virtual void TrackingStarted();
-  virtual void StepInfo();
-};
+BiasedRDPhysics::BiasedRDPhysics(G4int)
+ : G4VPhysicsConstructor("G4Radioactivation")
+{
+  G4EmParameters::Instance()->AddPhysics("World","G4Radioactivation");
+  G4DeexPrecoParameters* deex = G4NuclearLevelData::GetInstance()->GetParameters();
+  deex->SetStoreICLevelData(true);
+  deex->SetMaxLifeTime(G4NuclideTable::GetInstance()->GetThresholdOfHalfLife()
+                       /std::log(2.));
+}
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+BiasedRDPhysics::BiasedRDPhysics(const G4String&)
+ : BiasedRDPhysics(0)
+{}
 
-#endif
+
+BiasedRDPhysics::~BiasedRDPhysics()
+{}
+
+
+void BiasedRDPhysics::ConstructParticle()
+{
+  G4GenericIon::GenericIon();
+}
+
+
+void BiasedRDPhysics::ConstructProcess()
+{
+  G4LossTableManager* man = G4LossTableManager::Instance();
+  G4VAtomDeexcitation* ad = man->AtomDeexcitation();
+  if(!ad) {
+    G4EmParameters::Instance()->SetAugerCascade(true);
+    ad = new G4UAtomicDeexcitation();
+    man->SetAtomDeexcitation(ad);
+    ad->InitialiseAtomicDeexcitation();
+  }
+
+  G4PhysicsListHelper::GetPhysicsListHelper()->
+    RegisterProcess(new G4Radioactivation(), G4GenericIon::GenericIon());
+}
+

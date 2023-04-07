@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.26.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jackxu/Neutrinos/v2/rdecay02
+CMAKE_SOURCE_DIR = /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jackxu/Neutrinos/v2/rdecay02/build
+CMAKE_BINARY_DIR = /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/v2/rdecay02/build/CMakeFiles /Users/jackxu/Neutrinos/v2/rdecay02/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build/CMakeFiles /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/v2/rdecay02/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -221,6 +221,30 @@ src/ActionInitialization.s: src/ActionInitialization.cc.s
 src/ActionInitialization.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/ActionInitialization.cc.s
 .PHONY : src/ActionInitialization.cc.s
+
+src/BiasedRDPhysics.o: src/BiasedRDPhysics.cc.o
+.PHONY : src/BiasedRDPhysics.o
+
+# target to build an object file
+src/BiasedRDPhysics.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/BiasedRDPhysics.cc.o
+.PHONY : src/BiasedRDPhysics.cc.o
+
+src/BiasedRDPhysics.i: src/BiasedRDPhysics.cc.i
+.PHONY : src/BiasedRDPhysics.i
+
+# target to preprocess a source file
+src/BiasedRDPhysics.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/BiasedRDPhysics.cc.i
+.PHONY : src/BiasedRDPhysics.cc.i
+
+src/BiasedRDPhysics.s: src/BiasedRDPhysics.cc.s
+.PHONY : src/BiasedRDPhysics.s
+
+# target to generate assembly for a file
+src/BiasedRDPhysics.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/BiasedRDPhysics.cc.s
+.PHONY : src/BiasedRDPhysics.cc.s
 
 src/DetectorConstruction.o: src/DetectorConstruction.cc.o
 .PHONY : src/DetectorConstruction.o
@@ -438,30 +462,6 @@ src/SteppingAction.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/SteppingAction.cc.s
 .PHONY : src/SteppingAction.cc.s
 
-src/SteppingVerbose.o: src/SteppingVerbose.cc.o
-.PHONY : src/SteppingVerbose.o
-
-# target to build an object file
-src/SteppingVerbose.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/SteppingVerbose.cc.o
-.PHONY : src/SteppingVerbose.cc.o
-
-src/SteppingVerbose.i: src/SteppingVerbose.cc.i
-.PHONY : src/SteppingVerbose.i
-
-# target to preprocess a source file
-src/SteppingVerbose.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/SteppingVerbose.cc.i
-.PHONY : src/SteppingVerbose.cc.i
-
-src/SteppingVerbose.s: src/SteppingVerbose.cc.s
-.PHONY : src/SteppingVerbose.s
-
-# target to generate assembly for a file
-src/SteppingVerbose.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rdecay02.dir/build.make CMakeFiles/rdecay02.dir/src/SteppingVerbose.cc.s
-.PHONY : src/SteppingVerbose.cc.s
-
 src/TrackingAction.o: src/TrackingAction.cc.o
 .PHONY : src/TrackingAction.o
 
@@ -505,6 +505,9 @@ help:
 	@echo "... src/ActionInitialization.o"
 	@echo "... src/ActionInitialization.i"
 	@echo "... src/ActionInitialization.s"
+	@echo "... src/BiasedRDPhysics.o"
+	@echo "... src/BiasedRDPhysics.i"
+	@echo "... src/BiasedRDPhysics.s"
 	@echo "... src/DetectorConstruction.o"
 	@echo "... src/DetectorConstruction.i"
 	@echo "... src/DetectorConstruction.s"
@@ -532,9 +535,6 @@ help:
 	@echo "... src/SteppingAction.o"
 	@echo "... src/SteppingAction.i"
 	@echo "... src/SteppingAction.s"
-	@echo "... src/SteppingVerbose.o"
-	@echo "... src/SteppingVerbose.i"
-	@echo "... src/SteppingVerbose.s"
 	@echo "... src/TrackingAction.o"
 	@echo "... src/TrackingAction.i"
 	@echo "... src/TrackingAction.s"

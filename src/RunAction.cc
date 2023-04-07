@@ -88,15 +88,9 @@ void RunAction::BeginOfRunAction(const G4Run*)
   //histograms
   //
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-  analysisManager->SetActivation(true);
   if ( analysisManager->IsActive() ) {
-    std::cout << "AnalysisManager is active." << std::endl;
     analysisManager->OpenFile();
   }  
-  else
-    {
-      std::cout << "AnalysisManager is NOT active." << std::endl;
-    }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

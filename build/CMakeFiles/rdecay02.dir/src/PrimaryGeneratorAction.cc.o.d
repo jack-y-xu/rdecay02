@@ -1,6 +1,6 @@
 CMakeFiles/rdecay02.dir/src/PrimaryGeneratorAction.cc.o: \
-  /Users/jackxu/Neutrinos/v2/rdecay02/src/PrimaryGeneratorAction.cc \
-  /Users/jackxu/Neutrinos/v2/rdecay02/include/PrimaryGeneratorAction.hh \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/src/PrimaryGeneratorAction.cc \
+  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/PrimaryGeneratorAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleGun.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/globals.hh \
@@ -771,7 +771,6 @@ CMakeFiles/rdecay02.dir/src/PrimaryGeneratorAction.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AllocatorPool.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PrimaryParticle.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleMomentum.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GeneralParticleSource.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Event.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/evtdefs.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4HCofThisEvent.hh \
@@ -787,89 +786,17 @@ CMakeFiles/rdecay02.dir/src/PrimaryGeneratorAction.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/PTL/Types.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/PTL/Utility.hh \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SingleParticleSource.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SPSPosDistribution.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Navigator.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/geomdefs.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AffineTransform.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4RotationMatrix.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/Rotation.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/LorentzVector.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/LorentzVector.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/AxisAngle.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/AxisAngle.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationX.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationX.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationY.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationY.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationZ.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/RotationZ.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/Rotation.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Transform3D.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Geometry/Transform3D.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Geometry/Transform3D.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Geometry/Point3D.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Geometry/Vector3D.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Geometry/Normal3D.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AffineTransform.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4LogicalVolume.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Region.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GeomSplitter.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/geomwdefs.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Region.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VPhysicalVolume.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VPhysicalVolume.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4LogicalVolume.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSVolume.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VTouchable.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VTouchable.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSVolume.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSSolid.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GRSSolid.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4TouchableHandle.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ReferenceCountedHandle.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4TouchableHistoryHandle.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4TouchableHistory.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationHistory.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationLevel.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationLevelRep.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationLevelRep.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationLevel.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationHistoryPool.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationHistory.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4TouchableHistory.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NormalNavigation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VSolid.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VSolid.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AuxiliaryNavServices.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AuxiliaryNavServices.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NormalNavigation.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VoxelNavigation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4NavigationLogger.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4BlockingList.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4BlockingList.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SmartVoxelProxy.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SmartVoxelProxy.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SmartVoxelNode.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SmartVoxelNode.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SmartVoxelHeader.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SmartVoxelHeader.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VoxelNavigation.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParameterisedNavigation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VPVParameterisation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VVolumeMaterialScanner.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParameterisedNavigation.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ReplicaNavigation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ReplicaNavigation.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4RegularNavigation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VExternalNavigation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Navigator.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SPSRandomGenerator.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PhysicsFreeVector.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PhysicsVector.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleTable.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleTableIterator.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleTable.icc \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4IonTable.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Ions.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Geantino.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SystemOfUnits.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/Randomize.hh \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/Randomize.h \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/DualRand.h \
+  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/RandomEngine.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -887,33 +814,6 @@ CMakeFiles/rdecay02.dir/src/PrimaryGeneratorAction.cc.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Log.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PhysicsVectorType.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PhysicsVector.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4DataInterpolation.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Cache.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4CacheDetails.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SPSAngDistribution.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SPSEneDistribution.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GeneralParticleSourceMessenger.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UImessenger.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIdirectory.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIcommand.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIparameter.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UItokenNum.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ApplicationState.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4GeneralParticleSourceData.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleTable.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleTableIterator.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleTable.icc \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4IonTable.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Ions.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4Geantino.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4SystemOfUnits.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/Randomize.hh \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/Randomize.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/DualRand.h \
-  /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/RandomEngine.h \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/RandomEngine.icc \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/JamesRandom.h \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Random/MixMaxRng.h \

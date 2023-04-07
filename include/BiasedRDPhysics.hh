@@ -23,51 +23,31 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-/// \file DetectorMessenger.hh
-/// \brief Definition of the DetectorMessenger class
-//
-//
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#ifndef DetectorMessenger_h
-#define DetectorMessenger_h 1
+#ifndef BiasedRDPhysics_h
+#define BiasedRDPhysics_h 1
 
-#include "G4UImessenger.hh"
-#include "globals.hh"
+#include "G4VPhysicsConstructor.hh"
 
-class DetectorConstruction;
-class G4UIdirectory;
-class G4UIcmdWithAString;
-class G4UIcmdWithADoubleAndUnit;
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+class G4Radioactivation;
 
-class DetectorMessenger: public G4UImessenger
+class BiasedRDPhysics : public G4VPhysicsConstructor
 {
-  public:
-  
-    DetectorMessenger(DetectorConstruction* );
-   ~DetectorMessenger();
-    
-    virtual void SetNewValue(G4UIcommand*, G4String);
-    
-  private:
-  
-    DetectorConstruction*      fDetector;
-    
-    G4UIdirectory*             fRdecayDir;
-    G4UIdirectory*             fDetDir;
-    G4UIcmdWithAString*        fTargMatCmd;
-    G4UIcmdWithAString*        fDetectMatCmd;
-    G4UIcmdWithADoubleAndUnit* fTargRadiusCmd;
-    G4UIcmdWithADoubleAndUnit* fInsetRadiusCmd;
-    G4UIcmdWithADoubleAndUnit* fDetectThicknessCmd;
-    G4UIcmdWithADoubleAndUnit* fTargLengthCmd;
-    G4UIcmdWithADoubleAndUnit* fDetectLengthCmd;    
-};
+  public: 
+    BiasedRDPhysics(G4int verbose = 1);
+    BiasedRDPhysics(const G4String& name);
+    virtual ~BiasedRDPhysics();
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+    // This is a dummy method for physics
+    virtual void ConstructParticle();
+ 
+    // This method will be invoked in the Construct() method.
+    // each physics process will be instantiated and
+    // registered to the process manager of each particle type 
+    virtual void ConstructProcess();
+
+};
 
 #endif
 

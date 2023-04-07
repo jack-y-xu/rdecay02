@@ -56,13 +56,10 @@ class DetectorConstruction : public G4VUserDetectorConstruction
     
     void SetTargetLength (G4double value);
     void SetTargetRadius (G4double value);
-    void SetShieldThickness (G4double value);
-    void SetInsetRadius (G4double value);
     void SetTargetMaterial (G4String);
     
     void SetDetectorLength(G4double value);           
     void SetDetectorThickness(G4double value);  
-    void SetDetectorRadius(G4double value);  
     void SetDetectorMaterial(G4String);               
                    
     void PrintParameters();
@@ -71,15 +68,11 @@ class DetectorConstruction : public G4VUserDetectorConstruction
       
     G4double GetTargetLength();
     G4double GetTargetRadius();
-    G4double GetShieldThickness();
-    G4double SetInsetRadius();
     G4Material* GetTargetMaterial();       
-    G4Material* GetShieldMaterial(); 
     G4LogicalVolume* GetLogicTarget();
     
     G4double GetDetectorLength();
     G4double GetDetectorThickness();
-    G4double GetDetectorRadius();
     G4Material* GetDetectorMaterial();                 
     G4LogicalVolume* GetLogicDetector();      
                        
@@ -87,16 +80,11 @@ class DetectorConstruction : public G4VUserDetectorConstruction
   
     G4double           fTargetLength; 
     G4double           fTargetRadius;
-    G4double           fShieldThickness;
-    G4double           fInsetRadius;
     G4Material*        fTargetMater;
-    G4Material*        fShieldMater;
     G4LogicalVolume*   fLogicTarget;
-    G4LogicalVolume*   fLogicShield;
                  
     G4double           fDetectorLength;
-  G4double           fDetectorThickness;
-    G4double           fDetectorRadius;
+    G4double           fDetectorThickness;
     G4Material*        fDetectorMater;
     G4LogicalVolume*   fLogicDetector;
                
