@@ -62,10 +62,10 @@ DetectorConstruction::DetectorConstruction()
  fWorldMater(0), fPhysiWorld(0),
  fDetectorMessenger(0)
 {
-  fTargetLength      = 1*cm; 
-  fTargetRadius      = 0.5*cm;
-  fDetectorLength    = 5*cm; 
-  fDetectorThickness = 2*cm;
+  fTargetLength      = 1*m; 
+  fTargetRadius      = 0.5*m;
+  fDetectorLength    = 5*m; 
+  fDetectorThickness = 2*m;
   fInsetRadius = 0.0*cm;
   fDetectorRadius = 0.0*cm;
 
@@ -148,9 +148,6 @@ void DetectorConstruction::DefineMaterials()
 
 G4VPhysicalVolume* DetectorConstruction::ConstructVolumes()
 {
-
-
-
   /*
   G4Tubs*
   sWorld = new G4Tubs("World",                                 //name
