@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.26.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02
+CMAKE_SOURCE_DIR = /Users/jackxu/Neutrinos/v2/rdecay02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build
+CMAKE_BINARY_DIR = /Users/jackxu/Neutrinos/v2/rdecay02/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build/CMakeFiles /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/v2/rdecay02/build/CMakeFiles /Users/jackxu/Neutrinos/v2/rdecay02/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jackxu/Neutrinos/v2/rdecay02/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

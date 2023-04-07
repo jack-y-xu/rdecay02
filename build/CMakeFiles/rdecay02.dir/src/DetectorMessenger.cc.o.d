@@ -1,6 +1,6 @@
 CMakeFiles/rdecay02.dir/src/DetectorMessenger.cc.o: \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/src/DetectorMessenger.cc \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/DetectorMessenger.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/src/DetectorMessenger.cc \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/DetectorMessenger.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UImessenger.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/globals.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ios.hh \
@@ -758,7 +758,7 @@ CMakeFiles/rdecay02.dir/src/DetectorMessenger.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Utility/defs.h \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/DetectorConstruction.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/DetectorConstruction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VUserDetectorConstruction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIcmdWithAString.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UIcmdWithADoubleAndUnit.hh

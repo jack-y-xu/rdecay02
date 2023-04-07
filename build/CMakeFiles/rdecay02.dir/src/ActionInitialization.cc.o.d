@@ -1,8 +1,8 @@
 CMakeFiles/rdecay02.dir/src/ActionInitialization.cc.o: \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/src/ActionInitialization.cc \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/ActionInitialization.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/src/ActionInitialization.cc \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/ActionInitialization.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VUserActionInitialization.hh \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/PrimaryGeneratorAction.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/PrimaryGeneratorAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleGun.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/globals.hh \
@@ -773,11 +773,11 @@ CMakeFiles/rdecay02.dir/src/ActionInitialization.cc.o: \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4AllocatorPool.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4PrimaryParticle.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4ParticleMomentum.hh \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/RunAction.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/RunAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UserRunAction.hh \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/EventAction.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/EventAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UserEventAction.hh \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/TrackingAction.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/TrackingAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UserTrackingAction.hh \
-  /Users/jackxu/Neutrinos/geant4/examples/extended/radioactivedecay/rdecay02/include/SteppingAction.hh \
+  /Users/jackxu/Neutrinos/v2/rdecay02/include/SteppingAction.hh \
   /Users/jackxu/Neutrinos/geant4-v11.1.0-install/include/Geant4/G4UserSteppingAction.hh
