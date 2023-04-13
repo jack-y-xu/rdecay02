@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------------
 # Setup the project
 cmake_minimum_required(VERSION 3.16...3.21)
-project(rdecay02)
+project(rdecay02-v2)
 
 #----------------------------------------------------------------------------
 # Find Geant4 package, activating all available UI and Vis drivers by default
@@ -41,11 +41,13 @@ target_link_libraries(rdecay02 ${Geant4_LIBRARIES} )
 # Copy all scripts to the build directory, i.e. the directory in which we
 # build rdecay02. This is so that we can run the executable directly because it
 # relies on these scripts being in the current working directory.
-#
+# 
 set(rdecay02_SCRIPTS
     debug.mac
     plotHisto.C
     rdecay02.in
+    scintillation_setup.mac
+    scintillation_events.mac
     vis.mac
   )
 

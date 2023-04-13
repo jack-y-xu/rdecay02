@@ -1,4 +1,4 @@
-cd /Users/jackxu/Neutrinos/v2/rdecay02 
+cd /Users/jackxu/Neutrinos/rdecay02-v2
 rm -rf build
 mkdir build
 cd build

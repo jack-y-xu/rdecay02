@@ -58,7 +58,6 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
   fParticleGun->SetParticleDefinition(particle);
   fParticleGun->SetParticleEnergy(9.6*eV);
   fParticleGun->SetParticlePosition(G4ThreeVector(0.*cm,0.*cm,0.*cm));
-  fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -73,24 +72,29 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
   // if (fParticleGun->GetParticleDefinition() == G4Geantino::Geantino()) {
-    G4ThreeVector momentumDirection = G4RandomDirection();
-    G4ThreeVector orthogonalVector = G4ThreeVector(1.0, 0.0, 0.0);
-    G4ThreeVector polarizationDirection = momentumDirection.cross(orthogonalVector);
-    if (polarizationDirection.mag() < 1e-9) {
-        orthogonalVector = G4ThreeVector(0.0, 1.0, 0.0);
-        polarizationDirection = momentumDirection.cross(orthogonalVector);
-    }
-    polarizationDirection = polarizationDirection.unit();
+      G4ThreeVector momentumDirection = G4RandomDirection();
+      G4ThreeVector orthogonalVector = G4ThreeVector(1.0, 0.0, 0.0);
+      G4ThreeVector polarizationDirection = momentumDirection.cross(orthogonalVector);
+      if (polarizationDirection.mag() < 1e-9) {
+          orthogonalVector = G4ThreeVector(0.0, 1.0, 0.0);
+          polarizationDirection = momentumDirection.cross(orthogonalVector);
+      }
+      polarizationDirection = polarizationDirection.unit();
 
-    G4ParticleDefinition* opticalPhoton = particleTable->FindParticle("opticalphoton");
-    fParticleGun->SetParticleDefinition(opticalPhoton);
-    fParticleGun->SetParticleMomentum(momentumDirection);
-    fParticleGun->SetParticlePolarization(polarizationDirection);
-    fParticleGun->SetParticleEnergy(9.6 * eV);
-  // }
-  // create vertex
-  //   
-    fParticleGun->GeneratePrimaryVertex(anEvent);
+      G4ParticleDefinition* opticalPhoton = particleTable->FindParticle("opticalphoton");
+      fParticleGun->SetParticleDefinition(opticalPhoton);
+      fParticleGun->SetParticleMomentum(momentumDirection);
+      fParticleGun->SetParticlePolarization(polarizationDirection);
+
+      G4double energy_123nm = 9.32 * eV;
+      G4double energy_133nm = 10.08 * eV;
+      G4double particleEnergy = G4RandFlat::shoot(energy_133nm, energy_123nm);
+      fParticleGun->SetParticleEnergy(particleEnergy);
+    // }
+    // create vertex
+    //
+      fParticleGun->GeneratePrimaryVertex(anEvent);
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
